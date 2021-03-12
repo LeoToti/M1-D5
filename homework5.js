@@ -545,10 +545,7 @@ const sumAllTheYears = function(){
 
         sum += parseInt(movies[i].Year,10) 
 
-
-
-
-     }
+    }
 
      return sum
  
@@ -557,3 +554,28 @@ const sumAllTheYears = function(){
 
 console.log(sumAllTheYears())
 
+
+
+const searchByTitle = function(str){
+
+    let array = []
+
+    for (i=0; i<movies.length; i++){
+
+        let newStr = str.toLowerCase()
+
+        let ok = movies[i].Title
+
+        let ok2 = ok.toLowerCase()
+
+        if(ok2.includes(newStr)){
+
+        array.push(movies[i].Title)
+
+        }
+    }
+
+    return array
+}
+
+console.log(searchByTitle('apes'))
