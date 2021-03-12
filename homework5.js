@@ -81,6 +81,7 @@ console.log(whoIsBigger(10,35))
 */
 
 const splitMe = function(str){
+
     return str.split(" ")
 }
 
@@ -113,13 +114,51 @@ console.log(deleteOne('ciao stai bene',false))
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
 
+const onlyLetters = function(str){
+
+    let array = str.split(" ")
+
+    let array2 = []
+
+    for (i=0; i<array.length; i++) {
+
+        if(isNaN(array[i])){
+
+            array2.push(array[i])
+
+        }
+
+    }
+    return array2.join(" ")
+}
+
+console.log(onlyLetters('Ciao Come Stai 4 5 6'))
+
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
 
+const isThisAnEmail = function (mail){
+ 
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)
+}
+
+
+
+console.log(isThisAnEmail("leo.toti.ciao@gmail.com"))
+
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
+
+const whatDayIsIt = function(){
+    var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  console.log("Today is : " + daylist[day] + ".");
+}
+
+whatDayIsIt()
 
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
