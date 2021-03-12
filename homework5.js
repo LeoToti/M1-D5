@@ -613,3 +613,20 @@ const searchAndDivide = function(str) {
 
 console.log(searchAndDivide('lord'))
 
+
+const removeIndex = function(id) {
+
+    for (i=0; i<movies.length; i++){
+
+        if (movies[i].imdbID==id){
+            delete movies[i]
+        }
+    }
+
+    return movies
+}
+
+console.log(removeIndex('tt0355702'))
+
+
+
