@@ -645,4 +645,23 @@ const isItPrime = function(num) {
   console.log(isItPrime(40))
 
 
+  const halfTree = function(n){
+    let array = []
+
+        for(y=1; y<=n; y++){
+            let str = '*'
+            //array.push(str.repeat(y))
+            console.log(str.repeat(y))
+        }
+
+
+    
+    return array
+  }
+
+  console.log(halfTree(3))
+
+
+
+
 
