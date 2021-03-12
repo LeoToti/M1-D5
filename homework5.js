@@ -173,11 +173,10 @@ whatDayIsIt()
 
 const rollTheDices = function(n){
 
-    
-    
     let values = []
 
     for (i=0; i<n; i++) {
+
         let dice = Math.floor(Math.random()*7)
 
         values.push(dice)
@@ -203,6 +202,27 @@ console.log(rollTheDices(6))
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
+
+const howManyDays = function(data) {
+
+    var today = new Date();
+
+    var time = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
+    console.log(time)
+    var date1 = new Date(data); 
+    var date2 = new Date(time); 
+      
+    // To calculate the time difference of two dates 
+    var Difference_In_Time = date1.getTime() - date2.getTime(); 
+    console.log(date1.getTime())
+      
+    // To calculate the no. of days between two dates 
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24)
+
+    return Difference_In_Days
+
+}
+console.log(howManyDays("2021/12/12"))
 
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
