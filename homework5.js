@@ -649,7 +649,7 @@ const isItPrime = function(num) {
     let array = []
 
         for(y=1; y<=n; y++){
-            let str = '*'
+            let str = ' *' + '* '
             //array.push(str.repeat(y))
             console.log(str.repeat(y))
         }
@@ -659,7 +659,7 @@ const isItPrime = function(num) {
     return array
   }
 
-  console.log(halfTree(3))
+  console.log(halfTree(5))
 
 
 
