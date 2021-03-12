@@ -20,30 +20,30 @@ let random = Math.floor(Math.random()*21)
     Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
 */
 
-/*const me = {
-    name: leonardo,
-    surname: toti,
+const me = {
+    name: 'leonardo',
+    surname: 'toti',
     age:36,
-};*/
+}
 
 /* Ex.E 
     Programmatically remove the age property from the previously create object.
 */
 
-//delete me.age
+delete me.age
 
 /* Ex.F 
    Programmatically add to the object me an array called "skills", containing the programming languages you know right now.
 */
 
-//me.skills = ['java','javascript','python']
+me.skills = ['java','javascript','python']
 
 
 /* Ex.G 
    Programmatically remove the last skill from the "skills" array inside the "me" object.
 */
 
-//delete me.skills['python']
+delete me.skills['python']
 
 // JS Functions
 /* Ex.1
@@ -502,4 +502,58 @@ const onlyTheTitles = function(){
 }
 
 console.log(onlyTheTitles())
+
+
+const onlyInThisMillennium = function(){
+
+    let movie = []
+
+    for (i=0; i<movies.length; i++){
+
+        if(parseInt(movies[i].Year,10)>1999){
+
+            movie.push(movies[i])
+
+        }
+    }
+
+    return movie
+
+}
+
+console.log(onlyInThisMillennium())
+
+
+const getMovieById = function(id){
+
+    for (i=0; i<movies.length; i++){
+
+        if(movies[i].imdbID==id){
+
+            return movies[i]
+        }
+
+
+    }
+}
+
+const sumAllTheYears = function(){
+
+    let sum = 0
+
+    for (i=0; i<movies.length; i++){
+
+        sum += parseInt(movies[i].Year,10) 
+
+
+
+
+     }
+
+     return sum
+ 
+
+}
+
+console.log(sumAllTheYears())
 
