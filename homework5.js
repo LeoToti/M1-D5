@@ -649,7 +649,7 @@ const isItPrime = function(num) {
     let array = []
 
         for(y=1; y<=n; y++){
-            let str = ' *' + '* '
+            let str = ' '+'*' + ' '
             //array.push(str.repeat(y))
             console.log(str.repeat(y))
         }
