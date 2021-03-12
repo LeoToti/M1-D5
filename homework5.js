@@ -214,7 +214,6 @@ const howManyDays = function(data) {
       
     // To calculate the time difference of two dates 
     var Difference_In_Time = date1.getTime() - date2.getTime(); 
-    console.log(date1.getTime())
       
     // To calculate the no. of days between two dates 
     var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24)
@@ -227,6 +226,25 @@ console.log(howManyDays("2021/12/12"))
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
+
+const isTodayMyBirthday = function() {
+
+    var today = new Date();
+
+    var time = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
+
+    var myBirthday = "1984/05/27"
+
+    if(time == myBirthday){
+
+        return true 
+    }
+    else{
+        return false
+    }
+
+}
+console.log(isTodayMyBirthday())
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
