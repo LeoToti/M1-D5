@@ -579,3 +579,37 @@ const searchByTitle = function(str){
 }
 
 console.log(searchByTitle('apes'))
+
+
+const searchAndDivide = function(str) {
+    let array = []
+    let array2 = []
+
+    for (i=0; i<movies.length; i++){
+
+        let newStr = str.toLowerCase()
+
+        let ok = movies[i].Title
+
+        let ok2 = ok.toLowerCase()
+
+        if(ok2.includes(newStr)){
+
+        array.push(movies[i].Title)
+
+        }
+        else {
+            array2.push(movies[i].Title) 
+        }
+    }
+
+    return {
+        contain: [array],
+        notContatin:[array2]
+    
+    }
+
+}
+
+console.log(searchAndDivide('lord'))
+
