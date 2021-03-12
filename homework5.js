@@ -171,6 +171,35 @@ whatDayIsIt()
     }
 */
 
+const rollTheDices = function(n){
+
+    
+    
+    let values = []
+
+    for (i=0; i<n; i++) {
+        let dice = Math.floor(Math.random()*7)
+
+        values.push(dice)
+    } 
+    let count = 0
+
+    for (i=0; i<n-1; i++){
+
+        count += values[i]
+    }
+
+    return {
+
+        val:values,
+
+        sum:count
+    }
+
+} 
+console.log(rollTheDices(6))
+
+
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
